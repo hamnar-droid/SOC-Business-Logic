@@ -1,0 +1,16 @@
+2024-09-16T10:15:22 | user_id=user_001 | action=view_product | product_id=PROD_100 | price=49.99 | status=200
+2024-09-16T10:15:45 | user_id=user_001 | action=add_to_cart | product_id=PROD_100 | quantity=1 | price=49.99 | status=200
+2024-09-16T10:16:10 | user_id=user_001 | action=checkout | order_id=ORD_5001 | total_items=1 | total_price=49.99 | status=200
+2024-09-16T10:20:33 | user_id=user_002 | action=view_product | product_id=PROD_200 | price=129.50 | status=200
+2024-09-16T10:21:05 | user_id=user_002 | action=add_to_cart | product_id=PROD_200 | quantity=2 | price=129.50 | status=200
+2024-09-16T10:21:30 | user_id=user_002 | action=checkout | order_id=ORD_5002 | total_items=2 | total_price=259.00 | status=200
+2024-09-16T10:25:15 | user_id=user_003 | action=view_product | product_id=PROD_150 | price=75.00 | status=200
+2024-09-16T10:25:45 | user_id=user_003 | action=add_to_cart | product_id=PROD_150 | quantity=3 | price=75.00 | status=200
+2024-09-16T10:26:20 | user_id=user_003 | action=apply_discount | discount_code=SUMMER20 | discount_pct=20 | status=200
+2024-09-16T10:27:00 | user_id=user_003 | action=checkout | order_id=ORD_5003 | total_items=3 | total_price=180.00 | status=200
+2024-09-16T10:30:22 | user_id=user_004 | action=view_product | product_id=PROD_300 | price=199.99 | status=200
+2024-09-16T10:31:05 | user_id=user_004 | action=add_to_cart | product_id=PROD_300 | quantity=1 | price=199.99 | status=200
+2024-09-16T10:31:45 | user_id=user_004 | action=checkout | order_id=ORD_5004 | total_items=1 | total_price=199.99 | status=200
+2024-09-16T10:35:10 | user_id=user_005 | action=view_product | product_id=PROD_250 | price=89.99 | status=200
+2024-09-16T10:35:50 | user_id=user_005 | action=add_to_cart | product_id=PROD_250 | quantity=2 | price=89.99 | status=200
+2024-09-16T10:36:30 | user_id=user_005 | action=checkout | order_id=ORD_5005 | total_items=2 | total_price=179.98 | status=200

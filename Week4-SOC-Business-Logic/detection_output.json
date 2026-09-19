@@ -1,0 +1,113 @@
+{
+  "alerts": [
+    {
+      "severity": "CRITICAL",
+      "rule": "PRICE_MANIPULATION",
+      "description": "Price changed significantly between view and checkout",
+      "details": "Possible man-in-the-middle price modification",
+      "timestamp": "N/A",
+      "user_id": "attacker_001",
+      "action": "intercept_request",
+      "order_id": "N/A"
+    },
+    {
+      "severity": "CRITICAL",
+      "rule": "ANOMALY_FLAG",
+      "description": "Anomaly detected - attack signature found",
+      "details": "price_mismatch",
+      "timestamp": "N/A",
+      "user_id": "attacker_001",
+      "action": "checkout",
+      "order_id": "ORD_5100"
+    },
+    {
+      "severity": "CRITICAL",
+      "rule": "NEGATIVE_QUANTITY",
+      "description": "Negative quantity detected - potential refund abuse",
+      "details": "Quantity: -10",
+      "timestamp": "N/A",
+      "user_id": "attacker_002",
+      "action": "add_to_cart",
+      "order_id": "N/A"
+    },
+    {
+      "severity": "CRITICAL",
+      "rule": "NEGATIVE_PRICE",
+      "description": "Negative price detected - potential payment fraud",
+      "details": "Price: $-750.0",
+      "timestamp": "N/A",
+      "user_id": "attacker_002",
+      "action": "checkout",
+      "order_id": "ORD_5101"
+    },
+    {
+      "severity": "HIGH",
+      "rule": "EXTREME_DISCOUNT",
+      "description": "Abnormal discount applied (99.0%) - possible abuse",
+      "details": "Discount code: ADMIN99",
+      "timestamp": "N/A",
+      "user_id": "attacker_003",
+      "action": "apply_discount",
+      "order_id": "N/A"
+    },
+    {
+      "severity": "CRITICAL",
+      "rule": "ANOMALY_FLAG",
+      "description": "Anomaly detected - attack signature found",
+      "details": "extreme_discount",
+      "timestamp": "N/A",
+      "user_id": "attacker_003",
+      "action": "checkout",
+      "order_id": "ORD_5102"
+    },
+    {
+      "severity": "CRITICAL",
+      "rule": "NEGATIVE_PRICE",
+      "description": "Negative price detected - potential payment fraud",
+      "details": "Price: $-99.99",
+      "timestamp": "N/A",
+      "user_id": "attacker_004",
+      "action": "modify_request",
+      "order_id": "N/A"
+    },
+    {
+      "severity": "CRITICAL",
+      "rule": "NEGATIVE_PRICE",
+      "description": "Negative price detected - potential payment fraud",
+      "details": "Price: $-4999.5",
+      "timestamp": "N/A",
+      "user_id": "attacker_004",
+      "action": "checkout",
+      "order_id": "ORD_5103"
+    },
+    {
+      "severity": "HIGH",
+      "rule": "RISK_FLAG",
+      "description": "Risk indicator found - suspicious behavior",
+      "details": "qty_mismatch",
+      "timestamp": "N/A",
+      "user_id": "attacker_005",
+      "action": "intercept_request",
+      "order_id": "N/A"
+    },
+    {
+      "severity": "CRITICAL",
+      "rule": "QUANTITY_PRICE_MISMATCH",
+      "description": "Ordered many items but charged for few - cart manipulation detected",
+      "details": "Unknown ratio",
+      "timestamp": "N/A",
+      "user_id": "attacker_005",
+      "action": "checkout",
+      "order_id": "ORD_5104"
+    }
+  ],
+  "rule_stats": {
+    "PRICE_MANIPULATION": 1,
+    "ANOMALY_FLAG": 2,
+    "NEGATIVE_QUANTITY": 1,
+    "NEGATIVE_PRICE": 3,
+    "EXTREME_DISCOUNT": 1,
+    "RISK_FLAG": 1,
+    "QUANTITY_PRICE_MISMATCH": 1
+  }
+}

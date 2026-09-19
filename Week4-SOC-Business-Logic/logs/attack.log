@@ -1,0 +1,19 @@
+2024-09-16T11:00:22 | user_id=attacker_001 | action=view_product | product_id=PROD_500 | price=299.99 | status=200
+2024-09-16T11:00:45 | user_id=attacker_001 | action=add_to_cart | product_id=PROD_500 | quantity=5 | price=299.99 | status=200
+2024-09-16T11:01:10 | user_id=attacker_001 | action=intercept_request | product_id=PROD_500 | price=0.01 | quantity=5 | status=200 | RISK=price_manipulation
+2024-09-16T11:01:35 | user_id=attacker_001 | action=checkout | order_id=ORD_5100 | total_items=5 | total_price=0.05 | status=200 | ANOMALY=price_mismatch
+2024-09-16T11:05:22 | user_id=attacker_002 | action=view_product | product_id=PROD_150 | price=75.00 | status=200
+2024-09-16T11:05:45 | user_id=attacker_002 | action=add_to_cart | product_id=PROD_150 | quantity=-10 | price=75.00 | status=200 | RISK=negative_quantity
+2024-09-16T11:06:10 | user_id=attacker_002 | action=checkout | order_id=ORD_5101 | total_items=-10 | total_price=-750.00 | status=200 | ANOMALY=negative_total
+2024-09-16T11:10:33 | user_id=attacker_003 | action=view_product | product_id=PROD_200 | price=129.50 | status=200
+2024-09-16T11:11:05 | user_id=attacker_003 | action=add_to_cart | product_id=PROD_200 | quantity=100 | price=129.50 | status=200
+2024-09-16T11:11:30 | user_id=attacker_003 | action=apply_discount | discount_code=ADMIN99 | discount_pct=99 | status=200 | RISK=invalid_discount
+2024-09-16T11:12:00 | user_id=attacker_003 | action=checkout | order_id=ORD_5102 | total_items=100 | total_price=129.50 | status=200 | ANOMALY=extreme_discount
+2024-09-16T11:15:22 | user_id=attacker_004 | action=view_product | product_id=PROD_300 | price=199.99 | status=200
+2024-09-16T11:15:45 | user_id=attacker_004 | action=add_to_cart | product_id=PROD_300 | quantity=50 | price=199.99 | status=200
+2024-09-16T11:16:00 | user_id=attacker_004 | action=modify_request | product_id=PROD_300 | quantity=50 | price=-99.99 | status=200 | RISK=negative_price
+2024-09-16T11:16:30 | user_id=attacker_004 | action=checkout | order_id=ORD_5103 | total_items=50 | total_price=-4999.50 | status=200 | ANOMALY=negative_price_charge
+2024-09-16T11:20:10 | user_id=attacker_005 | action=view_product | product_id=PROD_100 | price=49.99 | status=200
+2024-09-16T11:20:45 | user_id=attacker_005 | action=add_to_cart | product_id=PROD_100 | quantity=1 | price=49.99 | status=200
+2024-09-16T11:21:10 | user_id=attacker_005 | action=intercept_request | product_id=PROD_100 | quantity_mismatch=1_to_500 | original_price=49.99 | checkout_price=49.99 | status=200 | RISK=qty_mismatch
+2024-09-16T11:21:45 | user_id=attacker_005 | action=checkout | order_id=ORD_5104 | total_items=500 | total_price=49.99 | status=200 | ANOMALY=qty_price_mismatch
